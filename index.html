@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineStream - Inicio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo" onclick="location.href='index.html'">CINE<span>STREAM</span></div>
+        <div class="nav-links">
+            <span onclick="location.href='index.html'">Inicio</span>
+            <span>Películas</span>
+            <span>Series</span>
+        </div>
+    </nav>
+
+    <header class="search-section">
+        <div class="genre-container">
+            <button class="genre-pill" onclick="goGenre(28, 'Acción')">Acción</button>
+            <button class="genre-pill" onclick="goGenre(27, 'Horror')">Horror</button>
+            <button class="genre-pill" onclick="goGenre(35, 'Comedia')">Comedia</button>
+            <button class="genre-pill" onclick="goGenre(10749, 'Romance')">Romance</button>
+            <button class="genre-pill" onclick="goGenre(878, 'Sci-Fi')">Sci-Fi</button>
+        </div>
+        <h1>Busca películas, series y estrellas</h1>
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Ej: Oppenheimer, Tarantino, DiCaprio..." autocomplete="off">
+            <button type="submit">BUSCAR</button>
+        </form>
+    </header>
+
+    <main class="container">
+        <div id="searchResultsSection" style="display: none;">
+            <h2 class="section-title">Resultados encontrados</h2>
+            <div id="resultsGrid" class="movie-grid"></div>
+        </div>
+
+        <div id="homeContent">
+            <section class="home-section">
+                <h2 class="section-title">Estrenos y Tendencias</h2>
+                <div id="newReleasesGrid" class="movie-grid"></div>
+            </section>
+            <section class="home-section">
+                <h2 class="section-title">Clásicos Históricos</h2>
+                <div id="classicsGrid" class="movie-grid"></div>
+            </section>
+            <section class="fama-nav">
+                <h2 class="section-title">Explora lo mejor</h2>
+                <div class="btn-group-fama">
+                    <button class="btn btn-red" onclick="location.href='fama.html?type=movie'">PELÍCULAS PREMIADAS</button>
+                    <button class="btn btn-outline" onclick="location.href='fama.html?type=tv'">SERIES PREMIADAS</button>
+                    <button class="btn btn-outline" onclick="location.href='directors.html'">DIRECTORES IMPORTANTES</button>
+                    <button class="btn btn-outline" onclick="location.href='actors.html'">ACTORES RECONOCIDOS</button>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
